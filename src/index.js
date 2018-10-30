@@ -5,6 +5,7 @@ import configStore from "./store/configStore";
 import "./css/bootstrap.min.css";
 import "./App.css";
 import App from "./App";
+import "./firebase/firebase";
 
 const store = configStore();
 
