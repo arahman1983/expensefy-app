@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/arahman1983/expensefy-app/precache-manifest.356715c526b68f7460dd0fc0a3977f2e.js"
+  "/arahman1983/expensefy-app/precache-manifest.019bd45b80bbbbded086f9eac9c988f0.js"
 );
 
 workbox.clientsClaim();

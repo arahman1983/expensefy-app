@@ -8,7 +8,7 @@ const ExpenseTotalSummury = ({ expenseCount, expensesTotal }) => {
   return (
     <div>
       <h5>
-        There are {expenseCount} {expenseWord} with Total {expensesTotal}
+        There are {expenseCount} {expenseWord}
       </h5>
     </div>
   );
