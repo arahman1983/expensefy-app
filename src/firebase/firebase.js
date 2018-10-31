@@ -13,6 +13,9 @@ var config = {
 firebase.initializeApp(config);
 const database = firebase.database();
 
+export { firebase, database as default };
+
+/*
 database.ref("Expenses").on("child_removed", snapshot => {
   console.log(snapshot.key, snapshot.val());
 });
@@ -23,7 +26,7 @@ database.ref("Expenses").on("child_changed", snapshot => {
 database.ref("Expenses").on("child_added", snapshot => {
   console.log(snapshot.key, snapshot.val());
 });
-/*
+
 database.ref("Expenses").on("value", snapshot => {
   const Expenses = [];
   snapshot.forEach(childSnap => {
