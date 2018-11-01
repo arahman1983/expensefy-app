@@ -5,6 +5,7 @@ import configStore from "./store/configStore";
 import "./css/bootstrap.min.css";
 import "./App.css";
 import App from "./App";
+import { startsetExpenses } from "./actions/expenses";
 import "./firebase/firebase";
 
 const store = configStore();
@@ -21,4 +22,8 @@ const jsx = (
     <App />
   </Provider>
 );
-ReactDOM.render(jsx, document.getElementById("root"));
+ReactDOM.render(<p>Loading ...</p>, document.getElementById("root"));
+
+store.dispatch(startsetExpenses()).then(() => {
+  ReactDOM.render(jsx, document.getElementById("root"));
+});

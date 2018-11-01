@@ -40,8 +40,43 @@ export const removeExpens = ({ id } = {}) => ({
   id
 });
 
+export const startRemoveExpense = ({ id } = {}) => {
+  return dispatch => {
+    databases
+      .ref(`Expenses/${id}`)
+      .remove()
+      .then(() => {
+        dispatch(removeExpens({ id }));
+      });
+  };
+};
+
 export const editExpense = (id, updtes) => ({
   type: "EDIT_EXPENSE",
   id,
   updtes
 });
+
+export const setExpenses = expenses => ({
+  type: "SET_EXPENSES",
+  expenses
+});
+
+export const startsetExpenses = () => {
+  return dispatch => {
+    return databases
+      .ref("Expenses")
+      .once("value")
+      .then(snapshot => {
+        const expenses = [];
+
+        snapshot.forEach(childSnapshot => {
+          expenses.push({
+            id: childSnapshot.key,
+            ...childSnapshot.val()
+          });
+        });
+        dispatch(setExpenses(expenses));
+      });
+  };
+};
