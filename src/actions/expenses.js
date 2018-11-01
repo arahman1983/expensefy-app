@@ -9,14 +9,14 @@ export const startAddExpense = (expenseData = {}) => {
   return dispatch => {
     const {
       description = "",
-      note = "",
+      notes = "",
       amount = 0,
       createdAt = 0
     } = expenseData;
 
     const newExpense = {
       description,
-      note,
+      notes,
       amount,
       createdAt
     };
@@ -42,7 +42,7 @@ export const removeExpens = ({ id } = {}) => ({
 
 export const startRemoveExpense = ({ id } = {}) => {
   return dispatch => {
-    databases
+    return databases
       .ref(`Expenses/${id}`)
       .remove()
       .then(() => {
@@ -56,6 +56,17 @@ export const editExpense = (id, updtes) => ({
   id,
   updtes
 });
+
+export const startEditExpense = (id, updtes) => {
+  return dispatch => {
+    databases
+      .ref(`Expenses/${id}`)
+      .update(updtes)
+      .then(() => {
+        dispatch(editExpense(id, updtes));
+      });
+  };
+};
 
 export const setExpenses = expenses => ({
   type: "SET_EXPENSES",
