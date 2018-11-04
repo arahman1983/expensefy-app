@@ -7,19 +7,11 @@ export const Header = ({ startLogout }) => (
   <header>
     <h1>Expinsefy</h1>
     <div className="row py-3">
-      <NavLink
-        className="navlink"
-        activeClassName="bg-warning"
-        to="/dashboard"
-        exact={true}
-      >
+      <NavLink className="navlink" activeClassName="bg-warning" to="/dashboard">
         Home Page
       </NavLink>
       <NavLink className="navlink" activeClassName="bg-warning" to="/create">
         Add Expinse
-      </NavLink>
-      <NavLink className="navlink" activeClassName="bg-warning" to="/help">
-        Help
       </NavLink>
       <button onClick={startLogout} className="btn btn-default">
         Logout
