@@ -21,8 +21,8 @@
     "uuid": "^3.3.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "startbuild": "node server/server.js",
+    "starts": "react-scripts start",
+    "start": "node server/server.js",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "test": "jest"
