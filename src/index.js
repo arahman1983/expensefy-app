@@ -1,29 +1,44 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { history } from "./App";
 import { Provider } from "react-redux";
 import configStore from "./store/configStore";
 import "./css/bootstrap.min.css";
 import "./App.css";
 import App from "./App";
+import { login, logout } from "./actions/auth";
 import { startsetExpenses } from "./actions/expenses";
-import "./firebase/firebase";
+import { firebase } from "./firebase/firebase";
 
 const store = configStore();
-
-/*
-store.dispatch(setTextFilter("bill"));
-
-setTimeout(() => {
-  store.dispatch(setTextFilter("water"));
-}, 5000);*/
-
 const jsx = (
   <Provider store={store}>
     <App />
   </Provider>
 );
-ReactDOM.render(<p>Loading ...</p>, document.getElementById("root"));
 
-store.dispatch(startsetExpenses()).then(() => {
-  ReactDOM.render(jsx, document.getElementById("root"));
+let hasRendered = false;
+const renderApp = () => {
+  if (!hasRendered) {
+    ReactDOM.render(jsx, document.getElementById("root"));
+    hasRendered = true;
+  }
+};
+
+ReactDOM.render(<p>Loading ... </p>, document.getElementById("root"));
+
+firebase.auth().onAuthStateChanged(user => {
+  if (user) {
+    store.dispatch(login(user.uid));
+    store.dispatch(startsetExpenses()).then(() => {
+      renderApp();
+      if (history.location.pathname === "/") {
+        history.push("/dashboard");
+      }
+    });
+  } else {
+    store.dispatch(logout());
+    renderApp();
+    history.push("/");
+  }
 });
