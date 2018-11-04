@@ -11,11 +11,11 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
-
 importScripts(
-  "/arahman1983/expensefy-app/precache-manifest.5383b8f1a65cff19de9b5686124eecca.js"
+  "https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js"
 );
+
+importScripts("/precache-manifest.5383b8f1a65cff19de9b5686124eecca.js");
 
 workbox.clientsClaim();
 
@@ -28,7 +28,6 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/arahman1983/expensefy-app/index.html", {
-  
-  blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
+workbox.routing.registerNavigationRoute("/index.html", {
+  blacklist: [/^\/_/, /\/[^\/]+\.[^\/]+$/]
 });
