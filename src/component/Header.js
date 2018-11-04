@@ -5,7 +5,9 @@ import { startLogout } from "../actions/auth";
 
 export const Header = ({ startLogout }) => (
   <header>
-    <h1>Expinsefy</h1>
+    <div className="row p-3 bg-light">
+      <h3>Expinsefy</h3>
+    </div>
     <div className="row py-3">
       <NavLink className="navlink" activeClassName="bg-warning" to="/dashboard">
         Home Page

@@ -1,15 +1,15 @@
 {
-  "main.css": "/static/css/main.fc8dd95b.chunk.css",
-  "main.js": "/static/js/main.17f5933a.chunk.js",
-  "main.js.map": "/static/js/main.17f5933a.chunk.js.map",
-  "static/css/1.f321b3d6.chunk.css": "/static/css/1.f321b3d6.chunk.css",
-  "static/js/1.28c20426.chunk.js": "/static/js/1.28c20426.chunk.js",
-  "static/js/1.28c20426.chunk.js.map": "/static/js/1.28c20426.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.a0b4ad4d.js",
-  "runtime~main.js.map": "/static/js/runtime~main.a0b4ad4d.js.map",
-  "static/css/1.f321b3d6.chunk.css.map": "/static/css/1.f321b3d6.chunk.css.map",
-  "static/css/main.fc8dd95b.chunk.css.map": "/static/css/main.fc8dd95b.chunk.css.map",
-  "index.html": "/index.html",
-  "precache-manifest.f6fe7c30ce44ac901901de8030745075.js": "/precache-manifest.f6fe7c30ce44ac901901de8030745075.js",
-  "service-worker.js": "/service-worker.js"
+  "main.css": "/arahman1983/expensefy-app/static/css/main.fc8dd95b.chunk.css",
+  "main.js": "/arahman1983/expensefy-app/static/js/main.118cbfab.chunk.js",
+  "main.js.map": "/arahman1983/expensefy-app/static/js/main.118cbfab.chunk.js.map",
+  "static/css/1.f321b3d6.chunk.css": "/arahman1983/expensefy-app/static/css/1.f321b3d6.chunk.css",
+  "static/js/1.28c20426.chunk.js": "/arahman1983/expensefy-app/static/js/1.28c20426.chunk.js",
+  "static/js/1.28c20426.chunk.js.map": "/arahman1983/expensefy-app/static/js/1.28c20426.chunk.js.map",
+  "runtime~main.js": "/arahman1983/expensefy-app/static/js/runtime~main.a0b4ad4d.js",
+  "runtime~main.js.map": "/arahman1983/expensefy-app/static/js/runtime~main.a0b4ad4d.js.map",
+  "static/css/1.f321b3d6.chunk.css.map": "/arahman1983/expensefy-app/static/css/1.f321b3d6.chunk.css.map",
+  "static/css/main.fc8dd95b.chunk.css.map": "/arahman1983/expensefy-app/static/css/main.fc8dd95b.chunk.css.map",
+  "index.html": "/arahman1983/expensefy-app/index.html",
+  "precache-manifest.5383b8f1a65cff19de9b5686124eecca.js": "/arahman1983/expensefy-app/precache-manifest.5383b8f1a65cff19de9b5686124eecca.js",
+  "service-worker.js": "/arahman1983/expensefy-app/service-worker.js"
 }
