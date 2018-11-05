@@ -4,7 +4,7 @@ import ExpenseListFilters from "./expenseListFilters";
 import ExpenseTotalSummury from "./ExpenseTotalSummury";
 
 const ExpinseDashboardPage = () => (
-  <div>
+  <div className="container py-3">
     <ExpenseTotalSummury />
     <ExpenseListFilters />
     <ConnectedExpenseList />

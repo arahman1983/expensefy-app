@@ -5,8 +5,9 @@ import { startEditExpense } from "../actions/expenses";
 
 const EditExpinsePage = props => {
   return (
-    <div>
-      <h1>Edit Expense</h1>
+    <div className="container my-3">
+      <h4>Edit Expense</h4>
+      <hr />
       <ExpenseForm
         expense={props.expense}
         onSubmit={expense => {

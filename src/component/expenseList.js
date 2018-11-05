@@ -5,7 +5,7 @@ import selectedExpenses from "../selectors/expenses";
 const ExpenseList = props => (
   <div>
     <h5>Expense List</h5>
-    <table className="table">
+    <table className="table table-striped">
       <tbody>
         {props.expenses.map(expense => {
           return <ExpenseItemList key={expense.id} {...expense} />;

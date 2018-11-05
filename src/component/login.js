@@ -4,12 +4,11 @@ import { startLogin } from "../actions/auth";
 
 export const LoginPage = ({ startLogin }) => (
   <div className="row">
-    <div className="col-md-6 mx-auto text-center py-5">
-      <h2>Expensefy App</h2>
+    <div className="col-md-4 mx-auto signin">
+      <h2>Expensefy App.</h2>
       <p>Your Epenses here</p>
-      <br />
       <button onClick={startLogin} className="btn btn-primary">
-        Log in
+        Log in with Google
       </button>
     </div>
   </div>

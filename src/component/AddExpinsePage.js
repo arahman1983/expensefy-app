@@ -4,8 +4,9 @@ import ExpenseForm from "./ExpenseForm";
 import { startAddExpense } from "../actions/expenses";
 
 const AddExpinsePage = props => (
-  <div>
-    <h1>Add Expense</h1>
+  <div className="container my-3">
+    <h3>Add Expense</h3>
+    <hr />
     <ExpenseForm
       onSubmit={expense => {
         props.dispatch(startAddExpense(expense));

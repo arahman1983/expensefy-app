@@ -6,18 +6,28 @@ import { startLogout } from "../actions/auth";
 export const Header = ({ startLogout }) => (
   <header>
     <div className="row p-3 bg-light">
-      <h3>Expinsefy</h3>
-    </div>
-    <div className="row py-3">
-      <NavLink className="navlink" activeClassName="bg-warning" to="/dashboard">
-        Home Page
-      </NavLink>
-      <NavLink className="navlink" activeClassName="bg-warning" to="/create">
-        Add Expinse
-      </NavLink>
-      <button onClick={startLogout} className="btn btn-default">
-        Logout
-      </button>
+      <div className="col-md-4">
+        <h3>Expinsefy</h3>
+      </div>
+      <div className="col-md-8 text-right">
+        <NavLink
+          className="navlink"
+          activeClassName="navlinkActive"
+          to="/dashboard"
+        >
+          Home Page
+        </NavLink>
+        <NavLink
+          className="navlink"
+          activeClassName="navlinkActive"
+          to="/create"
+        >
+          Add Expinse
+        </NavLink>
+        <button onClick={startLogout} className="btn btn-default">
+          Logout
+        </button>
+      </div>
     </div>
   </header>
 );

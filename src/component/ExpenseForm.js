@@ -72,7 +72,7 @@ class ExpenseForm extends React.Component {
         {this.state.error && (
           <p className="bg-warning p-2">{this.state.error}</p>
         )}
-        <div className="col-md-8">
+        <div className="col-md-8 mx-auto">
           <form onSubmit={this.onSubmit}>
             <div className="form-group">
               <input
